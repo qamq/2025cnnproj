@@ -1,0 +1,21 @@
+name: cnn
+channels:
+  - pytorch #
+  - conda-forge
+  - defaults
+dependencies:
+  - pip>=22.1,<23
+  - python=3.8.13
+  - pandas>=1.5,<2
+  - tqdm>=4.64,<5
+  - numpy>=1.23,<2
+  - scikit-learn>=1.1,<2
+  - statsmodels>=0.11,<1
+  - pytorch>=1.7,<2
+  - torchvision>=0.8,<1
+  - pillow>=8.2,<9
+  - matplotlib>=3.3,<4
+  - jupyterlab
+  - pip:
+   #
+    - torchsummary

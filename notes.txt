@@ -1,0 +1,31 @@
+raw data: us_920101-200731.csv
+
+preprocessed: us_ret.feather
+
+create predictors and labels: generate_chart.py -> chart_library.py -> creating images
+                                                -> creating labels
+(image : label)
+(image : label)
+(image : label)  data structure <- chart_dataset.py
+(image : label)
+(image : label)
+
+2 sample images per year
+2D: images.dat <- binary file, stores images efficiently
+1D: time series <- ts_data_new.npz <- stores times series data efficiently
+labels.feather <- stores labels efficiently
+
+
+CNN <- cnn_model.py
+running the whole process: cnn_experiment.py:
+
+train_us_model() <- call train_single_model multiple times and combing the results
+train_cn_model()
+
+cnn_experiment.py: validating the model 
+
+backtest <- portfolio.py <- transforming raw signals into portfolios, plots etc
+plot: y axis: logged cumulative returns
+weekly rebalance <- 
+
+

@@ -1,0 +1,1250 @@
+
+(base) C:\Users\Administrator>cd C:\Users\Administrator\Jiang_Kelly_Xiu_2023
+
+(base) C:\Users\Administrator\Jiang_Kelly_Xiu_2023>conda activate ./cnn_env
+
+(C:\Users\Administrator\Jiang_Kelly_Xiu_2023\cnn_env) C:\Users\Administrator\Jiang_Kelly_Xiu_2023>cd ./Scripts
+(C:\Users\Administrator\Jiang_Kelly_Xiu_2023\cnn_env) C:\Users\Administrator\Jiang_Kelly_Xiu_2023\Scripts>python train_model.py
+Worker 0 from 1 workers for 1 jobs
+Start Training Ensem Number 0
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1993_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1993_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1993.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1993: samples size: 325216
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1994_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1994_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1994.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1994: samples size: 366008
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1995_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1995_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1995.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1995: samples size: 385123
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1996_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1996_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1996.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1996: samples size: 424095
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1997_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1997_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1997.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1997: samples size: 441370
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1998_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1998_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1998.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1998: samples size: 436434
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1999_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1999_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1999.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1999: samples size: 395602
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2000_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2000_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2000.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+I20R5: removing tail for year 2000 (379303 samples)
+Year 2000: samples size: 379303
+Training and validation data from 1993 to 2000                 with training set size 2207205 and validation set size 945946
+Training on device cuda:0 under ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+CNNModel(
+  (conv_layers): Sequential(
+    (0): Sequential(
+      (0): Conv2d(1, 64, kernel_size=(5, 3), stride=(3, 1), padding=(2, 1), dilation=(2, 1))
+      (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): LeakyReLU(negative_slope=0.01)
+      (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=True)
+    )
+    (1): Sequential(
+      (0): Conv2d(64, 128, kernel_size=(5, 3), stride=(1, 1), padding=(2, 1))
+      (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): LeakyReLU(negative_slope=0.01)
+      (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=True)
+    )
+    (2): Sequential(
+      (0): Conv2d(128, 256, kernel_size=(5, 3), stride=(1, 1), padding=(2, 1))
+      (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): LeakyReLU(negative_slope=0.01)
+      (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=True)
+    )
+    (3): Flatten()
+    (4): Dropout(p=0.5, inplace=False)
+  )
+  (fc): Linear(in_features=46080, out_features=2, bias=True)
+)
+Epoch 0: train: 100%|███████████████| 17244/17244 [05:36<00:00, 51.22batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 0, 'lr': '1.00E-04', 'diff': -0.15411481942094188, 'loss': 0.7225243188458134, 'accy': 0.5284543121277815, 'MCC': 0.05065919864497045}
+Epoch 0: validate: 100%|██████████████| 7391/7391 [01:17<00:00, 95.47batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 0, 'lr': '1.00E-04', 'diff': 0.05817668238990387, 'loss': 0.6831988627635993, 'accy': 0.5510272256555871, 'MCC': 0.10485859757724272}
+conv_layers.0.0.weight pct chg: 0.4577
+conv_layers.1.0.weight pct chg: 0.5293
+conv_layers.2.0.weight pct chg: 0.8125
+
+Epoch 1: train: 100%|███████████████| 17244/17244 [05:34<00:00, 51.55batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 1, 'lr': '1.00E-04', 'diff': -0.2488898856245795, 'loss': 0.681902594548263, 'accy': 0.5567643241112629, 'MCC': 0.10581001676040588}
+Epoch 1: validate: 100%|██████████████| 7391/7391 [01:16<00:00, 97.05batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 1, 'lr': '1.00E-04', 'diff': -0.384165692333389, 'loss': 0.679803094666381, 'accy': 0.56184602503737, 'MCC': 0.11600335454101834}
+conv_layers.0.0.weight pct chg: 0.1813
+conv_layers.1.0.weight pct chg: 0.3390
+conv_layers.2.0.weight pct chg: 0.4957
+
+Epoch 2: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.66batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 2, 'lr': '1.00E-04', 'diff': -0.26392790882586803, 'loss': 0.6793685313581013, 'accy': 0.5619111047682476, 'MCC': 0.11623111168145585}
+Epoch 2: validate: 100%|██████████████| 7391/7391 [01:16<00:00, 97.15batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 2, 'lr': '1.00E-04', 'diff': -0.270837870237836, 'loss': 0.6786209641693064, 'accy': 0.5629211392616492, 'MCC': 0.11861585755306867}
+conv_layers.0.0.weight pct chg: 0.1190
+conv_layers.1.0.weight pct chg: 0.2657
+conv_layers.2.0.weight pct chg: 0.3394
+
+Epoch 3: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.70batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 3, 'lr': '1.00E-04', 'diff': -0.26113523664544075, 'loss': 0.6784424443058992, 'accy': 0.5643232051395317, 'MCC': 0.12127200289316513}
+Epoch 3: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.39batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 3, 'lr': '1.00E-04', 'diff': -0.29919255433185404, 'loss': 0.6778679840698154, 'accy': 0.5646368820207496, 'MCC': 0.12197135290160097}
+conv_layers.0.0.weight pct chg: 0.1033
+conv_layers.1.0.weight pct chg: 0.2346
+conv_layers.2.0.weight pct chg: 0.2914
+
+Epoch 4: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.67batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 4, 'lr': '1.00E-04', 'diff': -0.2538119476894987, 'loss': 0.6776911743774575, 'accy': 0.5660312476639007, 'MCC': 0.12490219291047053}
+Epoch 4: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.57batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 4, 'lr': '1.00E-04', 'diff': -0.07968742401786148, 'loss': 0.6790330196073783, 'accy': 0.5628312821239267, 'MCC': 0.12270598397793372}
+conv_layers.0.0.weight pct chg: 0.0933
+conv_layers.1.0.weight pct chg: 0.2154
+conv_layers.2.0.weight pct chg: 0.2639
+
+Epoch 5: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.65batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 5, 'lr': '1.00E-04', 'diff': -0.24863073434502006, 'loss': 0.6770264342243454, 'accy': 0.5677338534481392, 'MCC': 0.1284878294093402}
+Epoch 5: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.65batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 5, 'lr': '1.00E-04', 'diff': -0.43018523256084384, 'loss': 0.6779513577551591, 'accy': 0.5640913963376345, 'MCC': 0.12140292530742146}
+conv_layers.0.0.weight pct chg: 0.0950
+conv_layers.1.0.weight pct chg: 0.2027
+conv_layers.2.0.weight pct chg: 0.2452
+Training complete in 41m 3s
+Best val loss: 0.677868 at epoch 3,
+Evaluating model on device: cuda:0
+Evaluation: : 100%|██████████████████████████████████████████████████████████| 17244/17244 [02:49<00:00, 101.55batch/s]
+{'epoch': -1, 'lr': '-1.00E+00', 'diff': -0.30028067170924316, 'loss': 0.6759543056558421, 'accy': 0.5695782675374512, 'MCC': 0.1319170545892946}
+Evaluation on train complete in 2m 50s
+Start Training Ensem Number 1
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1993_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1993_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1993.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1993: samples size: 325216
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1994_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1994_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1994.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1994: samples size: 366008
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1995_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1995_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1995.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1995: samples size: 385123
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1996_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1996_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1996.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1996: samples size: 424095
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1997_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1997_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1997.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1997: samples size: 441370
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1998_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1998_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1998.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1998: samples size: 436434
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1999_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1999_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1999.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1999: samples size: 395602
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2000_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2000_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2000.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+I20R5: removing tail for year 2000 (379303 samples)
+Year 2000: samples size: 379303
+Training and validation data from 1993 to 2000                 with training set size 2207205 and validation set size 945946
+Training on device cuda:0 under ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+CNNModel(
+  (conv_layers): Sequential(
+    (0): Sequential(
+      (0): Conv2d(1, 64, kernel_size=(5, 3), stride=(3, 1), padding=(2, 1), dilation=(2, 1))
+      (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): LeakyReLU(negative_slope=0.01)
+      (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=True)
+    )
+    (1): Sequential(
+      (0): Conv2d(64, 128, kernel_size=(5, 3), stride=(1, 1), padding=(2, 1))
+      (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): LeakyReLU(negative_slope=0.01)
+      (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=True)
+    )
+    (2): Sequential(
+      (0): Conv2d(128, 256, kernel_size=(5, 3), stride=(1, 1), padding=(2, 1))
+      (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): LeakyReLU(negative_slope=0.01)
+      (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=True)
+    )
+    (3): Flatten()
+    (4): Dropout(p=0.5, inplace=False)
+  )
+  (fc): Linear(in_features=46080, out_features=2, bias=True)
+)
+Epoch 0: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.64batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 0, 'lr': '1.00E-04', 'diff': -0.15525019198488585, 'loss': 0.7230973569673517, 'accy': 0.5294148028841906, 'MCC': 0.0525819574803008}
+Epoch 0: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.30batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 0, 'lr': '1.00E-04', 'diff': 0.37257095013880287, 'loss': 0.6898449190625388, 'accy': 0.5391459977630858, 'MCC': 0.10202007003705409}
+conv_layers.0.0.weight pct chg: 0.4546
+conv_layers.1.0.weight pct chg: 0.5239
+conv_layers.2.0.weight pct chg: 0.8016
+
+Epoch 1: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.72batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 1, 'lr': '1.00E-04', 'diff': -0.25211024802861537, 'loss': 0.6820635933932326, 'accy': 0.5564594136022707, 'MCC': 0.10515192820231442}
+Epoch 1: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.47batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 1, 'lr': '1.00E-04', 'diff': -0.3206736959615031, 'loss': 0.6789809831115667, 'accy': 0.5625257678556704, 'MCC': 0.11733115113817501}
+conv_layers.0.0.weight pct chg: 0.1979
+conv_layers.1.0.weight pct chg: 0.3418
+conv_layers.2.0.weight pct chg: 0.4907
+
+Epoch 2: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.63batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 2, 'lr': '1.00E-04', 'diff': -0.2634277287338512, 'loss': 0.6795244829180294, 'accy': 0.5620139497690518, 'MCC': 0.11648364034243455}
+Epoch 2: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.51batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 2, 'lr': '1.00E-04', 'diff': -0.3548151797248469, 'loss': 0.6786851136813207, 'accy': 0.5635173677990075, 'MCC': 0.11939370825047325}
+conv_layers.0.0.weight pct chg: 0.1223
+conv_layers.1.0.weight pct chg: 0.2679
+conv_layers.2.0.weight pct chg: 0.3396
+
+Epoch 3: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.71batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 3, 'lr': '1.00E-04', 'diff': -0.2619761191189763, 'loss': 0.6786071533939585, 'accy': 0.5639276822950292, 'MCC': 0.12047315908487394}
+Epoch 3: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.50batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 3, 'lr': '1.00E-04', 'diff': -0.40808037668112135, 'loss': 0.6779934280579117, 'accy': 0.5644698534588655, 'MCC': 0.12180437944351118}
+conv_layers.0.0.weight pct chg: 0.1071
+conv_layers.1.0.weight pct chg: 0.2383
+conv_layers.2.0.weight pct chg: 0.2933
+
+Epoch 4: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.68batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 4, 'lr': '1.00E-04', 'diff': -0.25560879030266787, 'loss': 0.6779018723925075, 'accy': 0.5658056229484801, 'MCC': 0.1244439818645625}
+Epoch 4: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.54batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 4, 'lr': '1.00E-04', 'diff': -0.31601803908468346, 'loss': 0.6773810235529261, 'accy': 0.5658473105230108, 'MCC': 0.12436120944543075}
+conv_layers.0.0.weight pct chg: 0.1005
+conv_layers.1.0.weight pct chg: 0.2217
+conv_layers.2.0.weight pct chg: 0.2656
+
+Epoch 5: train: 100%|███████████████| 17244/17244 [05:34<00:00, 51.62batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 5, 'lr': '1.00E-04', 'diff': -0.2515955699629169, 'loss': 0.677277852900676, 'accy': 0.567032967032967, 'MCC': 0.12703297352624296}
+Epoch 5: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.58batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 5, 'lr': '1.00E-04', 'diff': -0.25778215669816246, 'loss': 0.677177871366421, 'accy': 0.5664498819171496, 'MCC': 0.12600194987856983}
+conv_layers.0.0.weight pct chg: 0.0881
+conv_layers.1.0.weight pct chg: 0.2059
+conv_layers.2.0.weight pct chg: 0.2480
+
+Epoch 6: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.65batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 6, 'lr': '1.00E-04', 'diff': -0.2438110642192275, 'loss': 0.6764630899239727, 'accy': 0.569176401829463, 'MCC': 0.13155597277534511}
+Epoch 6: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.41batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 6, 'lr': '1.00E-04', 'diff': -0.3852989494114886, 'loss': 0.6773257299627609, 'accy': 0.5660270247984557, 'MCC': 0.12496353538333065}
+conv_layers.0.0.weight pct chg: 0.0871
+conv_layers.1.0.weight pct chg: 0.1952
+conv_layers.2.0.weight pct chg: 0.2322
+
+Epoch 7: train: 100%|███████████████| 17244/17244 [05:34<00:00, 51.61batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 7, 'lr': '1.00E-04', 'diff': -0.23771557240944996, 'loss': 0.6758408492997589, 'accy': 0.5706801135372563, 'MCC': 0.13473113796647762}
+Epoch 7: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.41batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 7, 'lr': '1.00E-04', 'diff': -0.3856245493928829, 'loss': 0.6774565881312727, 'accy': 0.5657754248128328, 'MCC': 0.1244206063173144}
+conv_layers.0.0.weight pct chg: 0.0885
+conv_layers.1.0.weight pct chg: 0.1874
+conv_layers.2.0.weight pct chg: 0.2200
+Training complete in 54m 37s
+Best val loss: 0.677178 at epoch 5,
+Evaluating model on device: cuda:0
+Evaluation: : 100%|██████████████████████████████████████████████████████████| 17244/17244 [02:49<00:00, 101.60batch/s]
+{'epoch': -1, 'lr': '-1.00E+00', 'diff': -0.25868689133995254, 'loss': 0.6747494996957621, 'accy': 0.5730423771240097, 'MCC': 0.13940548348430243}
+Evaluation on train complete in 2m 50s
+Start Training Ensem Number 2
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1993_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1993_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1993.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1993: samples size: 325216
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1994_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1994_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1994.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1994: samples size: 366008
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1995_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1995_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1995.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1995: samples size: 385123
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1996_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1996_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1996.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1996: samples size: 424095
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1997_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1997_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1997.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1997: samples size: 441370
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1998_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1998_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1998.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1998: samples size: 436434
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1999_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1999_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1999.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1999: samples size: 395602
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2000_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2000_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2000.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+I20R5: removing tail for year 2000 (379303 samples)
+Year 2000: samples size: 379303
+Training and validation data from 1993 to 2000                 with training set size 2207205 and validation set size 945946
+Training on device cuda:0 under ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+CNNModel(
+  (conv_layers): Sequential(
+    (0): Sequential(
+      (0): Conv2d(1, 64, kernel_size=(5, 3), stride=(3, 1), padding=(2, 1), dilation=(2, 1))
+      (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): LeakyReLU(negative_slope=0.01)
+      (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=True)
+    )
+    (1): Sequential(
+      (0): Conv2d(64, 128, kernel_size=(5, 3), stride=(1, 1), padding=(2, 1))
+      (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): LeakyReLU(negative_slope=0.01)
+      (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=True)
+    )
+    (2): Sequential(
+      (0): Conv2d(128, 256, kernel_size=(5, 3), stride=(1, 1), padding=(2, 1))
+      (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): LeakyReLU(negative_slope=0.01)
+      (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=True)
+    )
+    (3): Flatten()
+    (4): Dropout(p=0.5, inplace=False)
+  )
+  (fc): Linear(in_features=46080, out_features=2, bias=True)
+)
+Epoch 0: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.67batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 0, 'lr': '1.00E-04', 'diff': -0.15912568157466117, 'loss': 0.7229924983190018, 'accy': 0.5291796638735414, 'MCC': 0.05209872755530249}
+Epoch 0: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.59batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 0, 'lr': '1.00E-04', 'diff': -0.23207032959598117, 'loss': 0.6816518593241471, 'accy': 0.5581248823928638, 'MCC': 0.10871589644009275}
+conv_layers.0.0.weight pct chg: 0.4678
+conv_layers.1.0.weight pct chg: 0.5230
+conv_layers.2.0.weight pct chg: 0.8273
+
+Epoch 1: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.68batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 1, 'lr': '1.00E-04', 'diff': -0.2583942134962543, 'loss': 0.6819004824775015, 'accy': 0.5573596471555655, 'MCC': 0.10713261598549843}
+Epoch 1: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.49batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 1, 'lr': '1.00E-04', 'diff': -0.1973537601512137, 'loss': 0.6791892119604583, 'accy': 0.5626557964196688, 'MCC': 0.11874382344399943}
+conv_layers.0.0.weight pct chg: 0.1952
+conv_layers.1.0.weight pct chg: 0.3413
+conv_layers.2.0.weight pct chg: 0.4952
+
+Epoch 2: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.67batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 2, 'lr': '1.00E-04', 'diff': -0.26261856057774424, 'loss': 0.6794176483733761, 'accy': 0.5621684438010969, 'MCC': 0.11704415504509558}
+Epoch 2: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.58batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 2, 'lr': '1.00E-04', 'diff': -0.21770798755954357, 'loss': 0.6789319256029042, 'accy': 0.5632382821006696, 'MCC': 0.11950938831653615}
+conv_layers.0.0.weight pct chg: 0.1232
+conv_layers.1.0.weight pct chg: 0.2725
+conv_layers.2.0.weight pct chg: 0.3370
+
+Epoch 3: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.65batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 3, 'lr': '1.00E-04', 'diff': -0.25726699604250625, 'loss': 0.6783742089065079, 'accy': 0.5642407479142173, 'MCC': 0.12140570355162213}
+Epoch 3: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.51batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 3, 'lr': '1.00E-04', 'diff': -0.2361509007913771, 'loss': 0.6780851968065574, 'accy': 0.5646030534512541, 'MCC': 0.12198101893491861}
+conv_layers.0.0.weight pct chg: 0.1072
+conv_layers.1.0.weight pct chg: 0.2374
+conv_layers.2.0.weight pct chg: 0.2884
+
+Epoch 4: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.70batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 4, 'lr': '1.00E-04', 'diff': -0.2517786068806477, 'loss': 0.6777232647504374, 'accy': 0.5660135782584762, 'MCC': 0.12514048604972594}
+Epoch 4: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.73batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 4, 'lr': '1.00E-04', 'diff': -0.29749266871470464, 'loss': 0.6777327696049416, 'accy': 0.5657415962433373, 'MCC': 0.1235983634751819}
+conv_layers.0.0.weight pct chg: 0.0931
+conv_layers.1.0.weight pct chg: 0.2213
+conv_layers.2.0.weight pct chg: 0.2598
+
+Epoch 5: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.72batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 5, 'lr': '1.00E-04', 'diff': -0.2473531004143249, 'loss': 0.6770421907213531, 'accy': 0.5680550741775232, 'MCC': 0.12941153596879212}
+Epoch 5: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.55batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 5, 'lr': '1.00E-04', 'diff': -0.3101974108458622, 'loss': 0.6775486950761938, 'accy': 0.5662923676404361, 'MCC': 0.12467330224301783}
+conv_layers.0.0.weight pct chg: 0.0926
+conv_layers.1.0.weight pct chg: 0.2069
+conv_layers.2.0.weight pct chg: 0.2390
+
+Epoch 6: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.71batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 6, 'lr': '1.00E-04', 'diff': -0.2404674690388976, 'loss': 0.6762513234217165, 'accy': 0.569537038924794, 'MCC': 0.13254830378221089}
+Epoch 6: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.46batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 6, 'lr': '1.00E-04', 'diff': -0.2846399265920042, 'loss': 0.677124556390909, 'accy': 0.5656327105352736, 'MCC': 0.12348054092091862}
+conv_layers.0.0.weight pct chg: 0.0866
+conv_layers.1.0.weight pct chg: 0.1956
+conv_layers.2.0.weight pct chg: 0.2242
+
+Epoch 7: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.76batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 7, 'lr': '1.00E-04', 'diff': -0.23272917558631845, 'loss': 0.6754189069036456, 'accy': 0.5716637104392206, 'MCC': 0.13701816547626033}
+Epoch 7: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.52batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 7, 'lr': '1.00E-04', 'diff': -0.3385394092263195, 'loss': 0.6774137673111572, 'accy': 0.5659086248052214, 'MCC': 0.12376581245972362}
+conv_layers.0.0.weight pct chg: 0.0807
+conv_layers.1.0.weight pct chg: 0.1860
+conv_layers.2.0.weight pct chg: 0.2148
+
+Epoch 8: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.67batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 8, 'lr': '1.00E-04', 'diff': -0.22494738821269433, 'loss': 0.6746368562896163, 'accy': 0.5735756307184878, 'MCC': 0.1410394674537497}
+Epoch 8: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.71batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 8, 'lr': '1.00E-04', 'diff': -0.16567541910426176, 'loss': 0.6780453905163698, 'accy': 0.5653737105500737, 'MCC': 0.12502793905650847}
+conv_layers.0.0.weight pct chg: 0.0793
+conv_layers.1.0.weight pct chg: 0.1794
+conv_layers.2.0.weight pct chg: 0.2056
+Training complete in 61m 24s
+Best val loss: 0.677125 at epoch 6,
+Evaluating model on device: cuda:0
+Evaluation: : 100%|██████████████████████████████████████████████████████████| 17244/17244 [02:49<00:00, 101.73batch/s]
+{'epoch': -1, 'lr': '-1.00E+00', 'diff': -0.2825804580906622, 'loss': 0.673387901159254, 'accy': 0.5761245557163924, 'MCC': 0.14594754679405797}
+Evaluation on train complete in 2m 50s
+Start Training Ensem Number 3
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1993_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1993_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1993.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1993: samples size: 325216
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1994_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1994_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1994.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1994: samples size: 366008
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1995_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1995_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1995.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1995: samples size: 385123
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1996_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1996_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1996.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1996: samples size: 424095
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1997_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1997_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1997.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1997: samples size: 441370
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1998_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1998_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1998.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1998: samples size: 436434
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1999_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1999_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1999.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1999: samples size: 395602
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2000_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2000_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2000.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+I20R5: removing tail for year 2000 (379303 samples)
+Year 2000: samples size: 379303
+Training and validation data from 1993 to 2000                 with training set size 2207205 and validation set size 945946
+Training on device cuda:0 under ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+CNNModel(
+  (conv_layers): Sequential(
+    (0): Sequential(
+      (0): Conv2d(1, 64, kernel_size=(5, 3), stride=(3, 1), padding=(2, 1), dilation=(2, 1))
+      (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): LeakyReLU(negative_slope=0.01)
+      (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=True)
+    )
+    (1): Sequential(
+      (0): Conv2d(64, 128, kernel_size=(5, 3), stride=(1, 1), padding=(2, 1))
+      (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): LeakyReLU(negative_slope=0.01)
+      (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=True)
+    )
+    (2): Sequential(
+      (0): Conv2d(128, 256, kernel_size=(5, 3), stride=(1, 1), padding=(2, 1))
+      (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): LeakyReLU(negative_slope=0.01)
+      (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=True)
+    )
+    (3): Flatten()
+    (4): Dropout(p=0.5, inplace=False)
+  )
+  (fc): Linear(in_features=46080, out_features=2, bias=True)
+)
+Epoch 0: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.76batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 0, 'lr': '1.00E-04', 'diff': -0.15533717982697576, 'loss': 0.7244074265314185, 'accy': 0.5278748462421932, 'MCC': 0.049499636971502954}
+Epoch 0: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.50batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 0, 'lr': '1.00E-04', 'diff': -0.6975937315660725, 'loss': 0.6861554507297611, 'accy': 0.5501614257050614, 'MCC': 0.09692696824277088}
+conv_layers.0.0.weight pct chg: 0.4848
+conv_layers.1.0.weight pct chg: 0.5171
+conv_layers.2.0.weight pct chg: 0.8199
+
+Epoch 1: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.71batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 1, 'lr': '1.00E-04', 'diff': -0.2426131691437814, 'loss': 0.6819185932511881, 'accy': 0.5567357812255771, 'MCC': 0.10596341660822418}
+Epoch 1: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.32batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 1, 'lr': '1.00E-04', 'diff': -0.23583798652354362, 'loss': 0.6797688688365966, 'accy': 0.5615405107691137, 'MCC': 0.11600291283253729}
+conv_layers.0.0.weight pct chg: 0.1953
+conv_layers.1.0.weight pct chg: 0.3403
+conv_layers.2.0.weight pct chg: 0.4926
+
+Epoch 2: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.63batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 2, 'lr': '1.00E-04', 'diff': -0.25327461653992267, 'loss': 0.6794517828855834, 'accy': 0.5619405537772885, 'MCC': 0.11654336415835763}
+Epoch 2: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.45batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 2, 'lr': '1.00E-04', 'diff': -0.07302742439843289, 'loss': 0.679264155976815, 'accy': 0.5622265964441945, 'MCC': 0.12165812565801257}
+conv_layers.0.0.weight pct chg: 0.1308
+conv_layers.1.0.weight pct chg: 0.2719
+conv_layers.2.0.weight pct chg: 0.3383
+
+Epoch 3: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.71batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 3, 'lr': '1.00E-04', 'diff': -0.2536343475118985, 'loss': 0.6784836001010025, 'accy': 0.5642398417908622, 'MCC': 0.12129691445949267}
+Epoch 3: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.61batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 3, 'lr': '1.00E-04', 'diff': -0.191427417632719, 'loss': 0.6778928538076339, 'accy': 0.5649963105716393, 'MCC': 0.12391259284704041}
+conv_layers.0.0.weight pct chg: 0.1050
+conv_layers.1.0.weight pct chg: 0.2401
+conv_layers.2.0.weight pct chg: 0.2923
+
+Epoch 4: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.69batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 4, 'lr': '1.00E-04', 'diff': -0.24991833563262134, 'loss': 0.6777023942064764, 'accy': 0.5665481910379869, 'MCC': 0.12611913987353005}
+Epoch 4: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.31batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 4, 'lr': '1.00E-04', 'diff': -0.43719197501760143, 'loss': 0.6777822971395663, 'accy': 0.5652711676987904, 'MCC': 0.12370796459291142}
+conv_layers.0.0.weight pct chg: 0.0976
+conv_layers.1.0.weight pct chg: 0.2198
+conv_layers.2.0.weight pct chg: 0.2634
+
+Epoch 5: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.70batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 5, 'lr': '1.00E-04', 'diff': -0.2428705081766306, 'loss': 0.6771411735277234, 'accy': 0.5676282900772697, 'MCC': 0.1284382610159231}
+Epoch 5: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.34batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 5, 'lr': '1.00E-04', 'diff': -0.37381203578216937, 'loss': 0.6774153504484699, 'accy': 0.5658071390967349, 'MCC': 0.12414621277100574}
+conv_layers.0.0.weight pct chg: 0.0911
+conv_layers.1.0.weight pct chg: 0.2069
+conv_layers.2.0.weight pct chg: 0.2436
+
+Epoch 6: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.66batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 6, 'lr': '1.00E-04', 'diff': -0.23606189728638707, 'loss': 0.6764034619523708, 'accy': 0.5695374919864716, 'MCC': 0.1324611413295617}
+Epoch 6: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.41batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 6, 'lr': '1.00E-04', 'diff': -0.2528875855492808, 'loss': 0.6770307941731083, 'accy': 0.567213139016392, 'MCC': 0.1274735998782332}
+conv_layers.0.0.weight pct chg: 0.0822
+conv_layers.1.0.weight pct chg: 0.1981
+conv_layers.2.0.weight pct chg: 0.2288
+
+Epoch 7: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.70batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 7, 'lr': '1.00E-04', 'diff': -0.23046205495185088, 'loss': 0.67562765654303, 'accy': 0.5714466938956735, 'MCC': 0.13646203931730236}
+Epoch 7: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.46batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 7, 'lr': '1.00E-04', 'diff': -0.17064610453450832, 'loss': 0.6770766309040925, 'accy': 0.566595767623099, 'MCC': 0.1276176817567491}
+conv_layers.0.0.weight pct chg: 0.0832
+conv_layers.1.0.weight pct chg: 0.1896
+conv_layers.2.0.weight pct chg: 0.2166
+
+Epoch 8: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.68batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 8, 'lr': '1.00E-04', 'diff': -0.2233127416800886, 'loss': 0.6748186285160939, 'accy': 0.5731855446141161, 'MCC': 0.1401262707309003}
+Epoch 8: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.46batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 8, 'lr': '1.00E-04', 'diff': -0.223448272945813, 'loss': 0.6772665100798657, 'accy': 0.5660333676552362, 'MCC': 0.12544727069810074}
+conv_layers.0.0.weight pct chg: 0.0763
+conv_layers.1.0.weight pct chg: 0.1806
+conv_layers.2.0.weight pct chg: 0.2056
+Training complete in 61m 25s
+Best val loss: 0.677031 at epoch 6,
+Evaluating model on device: cuda:0
+Evaluation: : 100%|██████████████████████████████████████████████████████████| 17244/17244 [02:49<00:00, 101.77batch/s]
+{'epoch': -1, 'lr': '-1.00E+00', 'diff': -0.25271916292324453, 'loss': 0.6732130991718306, 'accy': 0.5765975521077562, 'MCC': 0.14687877963545656}
+Evaluation on train complete in 2m 49s
+Start Training Ensem Number 4
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1993_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1993_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1993.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1993: samples size: 325216
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1994_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1994_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1994.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1994: samples size: 366008
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1995_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1995_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1995.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1995: samples size: 385123
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1996_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1996_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1996.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1996: samples size: 424095
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1997_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1997_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1997.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1997: samples size: 441370
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1998_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1998_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1998.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1998: samples size: 436434
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1999_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1999_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1999.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1999: samples size: 395602
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2000_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2000_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2000.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+I20R5: removing tail for year 2000 (379303 samples)
+Year 2000: samples size: 379303
+Training and validation data from 1993 to 2000                 with training set size 2207205 and validation set size 945946
+Training on device cuda:0 under ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+CNNModel(
+  (conv_layers): Sequential(
+    (0): Sequential(
+      (0): Conv2d(1, 64, kernel_size=(5, 3), stride=(3, 1), padding=(2, 1), dilation=(2, 1))
+      (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): LeakyReLU(negative_slope=0.01)
+      (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=True)
+    )
+    (1): Sequential(
+      (0): Conv2d(64, 128, kernel_size=(5, 3), stride=(1, 1), padding=(2, 1))
+      (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): LeakyReLU(negative_slope=0.01)
+      (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=True)
+    )
+    (2): Sequential(
+      (0): Conv2d(128, 256, kernel_size=(5, 3), stride=(1, 1), padding=(2, 1))
+      (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): LeakyReLU(negative_slope=0.01)
+      (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=True)
+    )
+    (3): Flatten()
+    (4): Dropout(p=0.5, inplace=False)
+  )
+  (fc): Linear(in_features=46080, out_features=2, bias=True)
+)
+Epoch 0: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.68batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 0, 'lr': '1.00E-04', 'diff': -0.1533545819260105, 'loss': 0.7236353780017537, 'accy': 0.5285965734945327, 'MCC': 0.0510716983650485}
+Epoch 0: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.64batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 0, 'lr': '1.00E-04', 'diff': 0.06891513891913492, 'loss': 0.6844886523344279, 'accy': 0.5498263114384965, 'MCC': 0.10309645033174684}
+conv_layers.0.0.weight pct chg: 0.4640
+conv_layers.1.0.weight pct chg: 0.5214
+conv_layers.2.0.weight pct chg: 0.8149
+
+Epoch 1: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.68batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 1, 'lr': '1.00E-04', 'diff': -0.2533271716945186, 'loss': 0.6821933581978022, 'accy': 0.5561427234896623, 'MCC': 0.104605004045509}
+Epoch 1: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.41batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 1, 'lr': '1.00E-04', 'diff': -0.3522399798720012, 'loss': 0.6790458004092589, 'accy': 0.5623206821531038, 'MCC': 0.1163919268294087}
+conv_layers.0.0.weight pct chg: 0.1951
+conv_layers.1.0.weight pct chg: 0.3404
+conv_layers.2.0.weight pct chg: 0.4971
+
+Epoch 2: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.70batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 2, 'lr': '1.00E-04', 'diff': -0.2615873921996371, 'loss': 0.6796556403602037, 'accy': 0.5613556511515695, 'MCC': 0.11527761919668972}
+Epoch 2: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.51batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 2, 'lr': '1.00E-04', 'diff': -0.25250701414245635, 'loss': 0.6780845924483787, 'accy': 0.5641675106189994, 'MCC': 0.1210353505857914}
+conv_layers.0.0.weight pct chg: 0.1210
+conv_layers.1.0.weight pct chg: 0.2672
+conv_layers.2.0.weight pct chg: 0.3398
+
+Epoch 3: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.73batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 3, 'lr': '1.00E-04', 'diff': -0.2579538375456743, 'loss': 0.6786384169033768, 'accy': 0.5638628944751394, 'MCC': 0.12052250850849468}
+Epoch 3: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.64batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 3, 'lr': '1.00E-04', 'diff': -0.1385089635137735, 'loss': 0.677644167218254, 'accy': 0.5648208248673814, 'MCC': 0.12474835349282212}
+conv_layers.0.0.weight pct chg: 0.1033
+conv_layers.1.0.weight pct chg: 0.2353
+conv_layers.2.0.weight pct chg: 0.2895
+
+Epoch 4: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.73batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 4, 'lr': '1.00E-04', 'diff': -0.2536941516533353, 'loss': 0.6779814101853426, 'accy': 0.5655677655677656, 'MCC': 0.12410530424770233}
+Epoch 4: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.63batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 4, 'lr': '1.00E-04', 'diff': -0.21742678757561215, 'loss': 0.6774877230376827, 'accy': 0.5657955105259709, 'MCC': 0.12493847305457195}
+conv_layers.0.0.weight pct chg: 0.0951
+conv_layers.1.0.weight pct chg: 0.2173
+conv_layers.2.0.weight pct chg: 0.2602
+
+Epoch 5: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.63batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 5, 'lr': '1.00E-04', 'diff': -0.24807981134511747, 'loss': 0.6772619015630555, 'accy': 0.5674570327631552, 'MCC': 0.12807944802089807}
+Epoch 5: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.66batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 5, 'lr': '1.00E-04', 'diff': -0.38128814964067714, 'loss': 0.6776094249288468, 'accy': 0.5658991105200508, 'MCC': 0.12417089866518291}
+conv_layers.0.0.weight pct chg: 0.0912
+conv_layers.1.0.weight pct chg: 0.2050
+conv_layers.2.0.weight pct chg: 0.2412
+
+Epoch 6: train: 100%|███████████████| 17244/17244 [05:33<00:00, 51.75batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 6, 'lr': '1.00E-04', 'diff': -0.24097399199440014, 'loss': 0.6766241351049677, 'accy': 0.5690273445375487, 'MCC': 0.13140587476485613}
+Epoch 6: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.47batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 6, 'lr': '1.00E-04', 'diff': -0.3003279256955471, 'loss': 0.6771971409624689, 'accy': 0.56630082478281, 'MCC': 0.12500509483335798}
+conv_layers.0.0.weight pct chg: 0.0870
+conv_layers.1.0.weight pct chg: 0.1971
+conv_layers.2.0.weight pct chg: 0.2272
+
+Epoch 7: train: 100%|███████████████| 17244/17244 [05:34<00:00, 51.61batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 7, 'lr': '1.00E-04', 'diff': -0.23454323454323453, 'loss': 0.6759403319314224, 'accy': 0.570672411488738, 'MCC': 0.13487347525958787}
+Epoch 7: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.47batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 7, 'lr': '1.00E-04', 'diff': -0.3517938656117791, 'loss': 0.6774184502472684, 'accy': 0.5660280819412524, 'MCC': 0.12432162839425041}
+conv_layers.0.0.weight pct chg: 0.0872
+conv_layers.1.0.weight pct chg: 0.1886
+conv_layers.2.0.weight pct chg: 0.2144
+
+Epoch 8: train: 100%|███████████████| 17244/17244 [05:34<00:00, 51.59batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 8, 'lr': '1.00E-04', 'diff': -0.22526181301691506, 'loss': 0.675098896832158, 'accy': 0.5727904748312912, 'MCC': 0.13934333569860022}
+Epoch 8: validate: 100%|██████████████| 7391/7391 [01:15<00:00, 97.47batch/s, MCC=0, accy=0, diff=0, epoch=-1, loss=10]
+{'epoch': 8, 'lr': '1.00E-04', 'diff': -0.26113329936381147, 'loss': 0.6773425866484919, 'accy': 0.5658631676649618, 'MCC': 0.12443780271320982}
+conv_layers.0.0.weight pct chg: 0.0792
+conv_layers.1.0.weight pct chg: 0.1830
+conv_layers.2.0.weight pct chg: 0.2045
+Training complete in 61m 25s
+Best val loss: 0.677197 at epoch 6,
+Evaluating model on device: cuda:0
+Evaluation: : 100%|██████████████████████████████████████████████████████████| 17244/17244 [02:49<00:00, 101.69batch/s]
+{'epoch': -1, 'lr': '-1.00E+00', 'diff': -0.3002380839115533, 'loss': 0.6735241958430208, 'accy': 0.5754082652041835, 'MCC': 0.14434669658504648}
+Evaluation on train complete in 2m 50s
+C:\Users\Administrator\Jiang_Kelly_Xiu_2023\Scripts\Experiments\cnn_experiment.py:343: FutureWarning: In future versions `DataFrame.to_latex` is expected to utilise the base implementation of `Styler.to_latex` for formatting and rendering. The arguments signature may therefore change. It is recommended instead to use `DataFrame.style.to_latex` which also contains additional functionality.
+  file.write(val_df.to_latex())
+Generating 20d5p ensem results for year 1993 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1993_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1993_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1993.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1993: samples size: 325216
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 1994 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1994_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1994_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1994.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1994: samples size: 366008
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 1995 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1995_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1995_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1995.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1995: samples size: 385123
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 1996 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1996_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1996_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1996.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1996: samples size: 424095
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 1997 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1997_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1997_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1997.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1997: samples size: 441370
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 1998 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1998_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1998_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1998.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1998: samples size: 436434
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 1999 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1999_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_1999_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_1999.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 1999: samples size: 395602
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 2000 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2000_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2000_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2000.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+I20R5: removing tail for year 2000 (379303 samples)
+Year 2000: samples size: 379303
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 2001 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2001_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2001_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2001.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 2001: samples size: 369605
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 2002 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2002_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2002_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2002.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 2002: samples size: 344309
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 2003 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2003_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2003_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2003.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 2003: samples size: 324682
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 2004 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2004_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2004_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2004.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 2004: samples size: 319686
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 2005 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2005_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2005_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2005.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 2005: samples size: 301251
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 2006 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2006_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2006_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2006.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 2006: samples size: 309459
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 2007 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2007_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2007_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2007.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 2007: samples size: 330257
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 2008 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2008_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2008_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2008.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 2008: samples size: 330925
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 2009 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2009_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2009_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2009.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 2009: samples size: 322742
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 2010 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2010_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2010_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2010.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 2010: samples size: 307561
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 2011 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2011_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2011_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2011.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 2011: samples size: 298606
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 2012 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2012_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2012_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2012.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 2012: samples size: 313773
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 2013 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2013_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2013_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2013.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 2013: samples size: 319279
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 2014 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2014_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2014_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2014.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 2014: samples size: 331473
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 2015 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2015_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2015_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2015.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 2015: samples size: 349081
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 2016 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2016_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2016_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2016.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 2016: samples size: 322425
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 2017 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2017_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2017_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2017.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 2017: samples size: 330499
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 2018 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2018_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2018_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2018.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 2018: samples size: 353026
+Getting ensemble results on cuda:0 with 5 models
+Generating 20d5p ensem results for year 2019 with freq week
+Loading saved model from: ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar to ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint0.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint1.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint2.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint3.pth.tar
+Loading model state dict from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\checkpoint4.pth.tar
+loading images from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2019_images.dat
+../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\20d_week_has_vb_[20]_ma_2019_images.dat
+Loading mean and std from ../WORK_SPACE\data\stocks_dataset\stocks_USA\dataset_all\mean_std_20dweek_vbTrue_maTrue_2019.npz
+Using Ret_week as label
+Using None regression label (None represents classification label)
+Year 2019: samples size: 367427
+Getting ensemble results on cuda:0 with 5 models
+Loading 20d5p ensem results for year 2001 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2001.csv
+Loading 20d5p ensem results for year 2002 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2002.csv
+Loading 20d5p ensem results for year 2003 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2003.csv
+Loading 20d5p ensem results for year 2004 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2004.csv
+Loading 20d5p ensem results for year 2005 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2005.csv
+Loading 20d5p ensem results for year 2006 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2006.csv
+Loading 20d5p ensem results for year 2007 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2007.csv
+Loading 20d5p ensem results for year 2008 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2008.csv
+Loading 20d5p ensem results for year 2009 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2009.csv
+Loading 20d5p ensem results for year 2010 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2010.csv
+Loading 20d5p ensem results for year 2011 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2011.csv
+Loading 20d5p ensem results for year 2012 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2012.csv
+Loading 20d5p ensem results for year 2013 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2013.csv
+Loading 20d5p ensem results for year 2014 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2014.csv
+Loading 20d5p ensem results for year 2015 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2015.csv
+Loading 20d5p ensem results for year 2016 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2016.csv
+Loading 20d5p ensem results for year 2017 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2017.csv
+Loading 20d5p ensem results for year 2018 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2018.csv
+Loading 20d5p ensem results for year 2019 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2019.csv
+Loading ensem res with week return of no delay
+{'diff': -0.31565969582145414, 'loss': 0.6928410873620845, 'accy': 0.5176059856133199, 'MCC': 0.04777933071416171, 'Spearman': 0.07546760194410174, 'Pearson': 0.05588504069382443}
+Loading 20d5p ensem results for year 2001 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2001.csv
+Loading 20d5p ensem results for year 2002 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2002.csv
+Loading 20d5p ensem results for year 2003 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2003.csv
+Loading 20d5p ensem results for year 2004 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2004.csv
+Loading 20d5p ensem results for year 2005 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2005.csv
+Loading 20d5p ensem results for year 2006 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2006.csv
+Loading 20d5p ensem results for year 2007 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2007.csv
+Loading 20d5p ensem results for year 2008 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2008.csv
+Loading 20d5p ensem results for year 2009 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2009.csv
+Loading 20d5p ensem results for year 2010 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2010.csv
+Loading 20d5p ensem results for year 2011 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2011.csv
+Loading 20d5p ensem results for year 2012 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2012.csv
+Loading 20d5p ensem results for year 2013 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2013.csv
+Loading 20d5p ensem results for year 2014 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2014.csv
+Loading 20d5p ensem results for year 2015 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2015.csv
+Loading 20d5p ensem results for year 2016 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2016.csv
+Loading 20d5p ensem results for year 2017 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2017.csv
+Loading 20d5p ensem results for year 2018 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2018.csv
+Loading 20d5p ensem results for year 2019 with freq week
+Loading from ../WORK_SPACE\new_model_res\D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64\20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn\ensem_res\ensem5_res_2019.csv
+6235351 samples, 0 delay                     nan values 0,                    zero values 4404
+Calculating ew
+Calculating portfolio from 2001-01-05T00:00:00.000000000, 2001-01-19T00:00:00.000000000 to 2019-12-27T00:00:00.000000000
+Spearman Corr between Prob and Stock Return is 0.0755
+Pearson Corr between Prob and Stock Return is 0.0559
+Spearman Corr between Prob and Top/Bottom deciles Return is 0.1597
+Pearson Corr between Prob and Top/Bottom deciles Return is 0.1073
+               ret       std        SR
+Low      -0.317754  0.170542 -1.863208
+2        -0.033547  0.187668 -0.178759
+3         0.051592  0.194942  0.264651
+4         0.102050  0.196771  0.518624
+5         0.132749  0.198634  0.668309
+6         0.170222  0.199248  0.854325
+7         0.192774  0.197311  0.977007
+8         0.226999  0.195705  1.159903
+9         0.275535  0.194662  1.415456
+High      0.495950  0.184881  2.682543
+H-L       0.813705  0.122909  6.620393
+Turnover       NaN       NaN  6.656153
+Summary saved to ../WORK_SPACE\new_model_res\portfolio\USA_D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64_20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn_ensem5_noDelayedReturn\ew.csv
+C:\Users\Administrator\Jiang_Kelly_Xiu_2023\Scripts\Misc\utilities.py:111: FutureWarning: In future versions `DataFrame.to_latex` is expected to utilise the base implementation of `Styler.to_latex` for formatting and rendering. The arguments signature may therefore change. It is recommended instead to use `DataFrame.style.to_latex` which also contains additional functionality.
+  latex = (pf_df.iloc[: cut + 1]).to_latex()
+Calculating vw
+Calculating portfolio from 2001-01-05T00:00:00.000000000, 2001-01-19T00:00:00.000000000 to 2019-12-27T00:00:00.000000000
+Spearman Corr between Prob and Stock Return is 0.0755
+Pearson Corr between Prob and Stock Return is 0.0559
+Spearman Corr between Prob and Top/Bottom deciles Return is 0.1169
+Pearson Corr between Prob and Top/Bottom deciles Return is 0.0110
+               ret       std        SR
+Low      -0.066629  0.179205 -0.371804
+2         0.025953  0.187238  0.138611
+3         0.046751  0.190079  0.245955
+4         0.069257  0.184920  0.374523
+5         0.072784  0.189711  0.383659
+6         0.078091  0.184191  0.423968
+7         0.092686  0.187318  0.494806
+8         0.108383  0.190660  0.568464
+9         0.152201  0.192829  0.789309
+High      0.186101  0.203952  0.912477
+H-L       0.252731  0.135083  1.870933
+Turnover       NaN       NaN  7.361883
+Summary saved to ../WORK_SPACE\new_model_res\portfolio\USA_D20L3F53S31D21MP21F53S11D11MP21F53S11D11MP21C64_20d5p-lr1E-04-dp0.50-maTrue-vbTrue-weeklyTrained-noDelayedReturn_ensem5_noDelayedReturn\vw.csv
+C:\Users\Administrator\Jiang_Kelly_Xiu_2023\Scripts\Misc\utilities.py:111: FutureWarning: In future versions `DataFrame.to_latex` is expected to utilise the base implementation of `Styler.to_latex` for formatting and rendering. The arguments signature may therefore change. It is recommended instead to use `DataFrame.style.to_latex` which also contains additional functionality.
+  latex = (pf_df.iloc[: cut + 1]).to_latex()
