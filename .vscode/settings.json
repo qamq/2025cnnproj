@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./FINAL/Scripts_2"
+    ]
+}
